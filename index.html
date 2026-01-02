@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>musik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h1>musik</h1>
+        <ul>
+            <li class="active">🏠 Home</li>
+            <li>❤️ Favorit</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <h2>Lagu yang Disukai</h2>
+        <div class="playlist" id="playlist"></div>
+    </main>
+
+</div>
+
+<!-- PLAYER -->
+<footer class="player">
+
+    <div class="song-info">
+        <img id="cover">
+        <div>
+            <strong id="title">Pilih lagu</strong><br>
+            <span id="artist">-</span>
+        </div>
+    </div>
+
+    <div class="player-center">
+        <div class="controls">
+            <button onclick="shuffleSong()">🔀</button>
+            <button onclick="prevSong()">⏮</button>
+            <button class="play" onclick="togglePlay()">▶</button>
+            <button onclick="nextSong()">⏭</button>
+            <button onclick="repeatSong()">🔁</button>
+        </div>
+
+        <div class="progress-container">
+            <span id="current">0:00</span>
+            <input type="range" id="progress" value="0">
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <div class="volume">
+        🔊 <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+</footer>
+
+<audio id="audio"></audio>
+<script src="script.js"></script>
+</body>
+</html>
+
